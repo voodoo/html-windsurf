@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Vudmaska - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">Kaz</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Paul Vudmaska</span></h1>
+            <h4>(But you can call me <span class="highlight">Kaz</span>)</h4>
+            <p class="tagline">Full Stack Developer | Designer | Creator</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary">Get in Touch</a>
+                <a href="#projects" class="btn secondary">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a passionate developer with a keen eye for design and a love for creating seamless user experiences. With expertise in modern web technologies, I turn ideas into reality.</p>
+                <div class="facts">
+                    <div class="fact">
+                        <i class="fas fa-code"></i>
+                        <h3>Clean Code</h3>
+                        <p>Writing maintainable, efficient code</p>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Modern Tech</h3>
+                        <p>Using latest technologies</p>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-users"></i>
+                        <h3>Collaborative</h3>
+                        <p>Great team player</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project cards will be dynamically added with JavaScript -->
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skill-list">
+                    <div class="skill">
+                        <span>HTML/CSS</span>
+                        <div class="progress-bar" data-progress="90"></div>
+                    </div>
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="progress-bar" data-progress="85"></div>
+                    </div>
+                    <div class="skill">
+                        <span>Turbo/Stimulus</span>
+                        <div class="progress-bar" data-progress="50"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <div class="skill-list">
+                    <div class="skill">
+                        <span>Ruby</span>
+                        <div class="progress-bar" data-progress="80"></div>
+                    </div>
+                    <div class="skill">
+                        <span>Ruby on Rails</span>
+                        <div class="progress-bar" data-progress="85"></div>
+                    </div>
+                    <div class="skill">
+                        <span>SQL</span>
+                        <div class="progress-bar" data-progress="45"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder=" " required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Paul Vudmaska. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
