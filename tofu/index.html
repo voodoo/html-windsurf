@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tofu Paradise</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <h1>Tofu Paradise</h1>
+        <nav>
+            <button class="nav-btn" data-section="recipes">Recipes</button>
+            <button class="nav-btn" data-section="types">Types of Tofu</button>
+            <button class="nav-btn" data-section="nutrition">Nutrition</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="recipes" class="active">
+            <h2>Delicious Tofu Recipes</h2>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <img src="images/crispy.jpg" alt="Crispy tofu dish" class="recipe-image">
+                    <h3>Crispy Tofu</h3>
+                    <p>Perfect crispy tofu that's crispy outside and tender inside.</p>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/mapo.webp" alt="Mapo tofu dish" class="recipe-image">
+                    <h3>Mapo Tofu</h3>
+                    <p>Classic Sichuan dish with silky tofu in spicy sauce.</p>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/tofu.jpg" alt="Tofu scramble dish" class="recipe-image">
+                    <h3>Tofu Scramble</h3>
+                    <p>Healthy breakfast alternative that's full of protein.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="types" class="hidden">
+            <h2>Types of Tofu</h2>
+            <div class="tofu-types">
+                <div class="type-card">
+                    <h3>Silken Tofu</h3>
+                    <p>Smooth and delicate, perfect for soups and desserts.</p>
+                </div>
+                <div class="type-card">
+                    <h3>Firm Tofu</h3>
+                    <p>Great for stir-frying and grilling.</p>
+                </div>
+                <div class="type-card">
+                    <h3>Extra Firm Tofu</h3>
+                    <p>Ideal for crispy dishes and meat substitutes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="nutrition" class="hidden">
+            <h2>Nutritional Benefits</h2>
+            <div class="nutrition-info">
+                <div class="benefit">
+                    <h3>Protein Rich</h3>
+                    <p>High quality plant-based protein source.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Low Calorie</h3>
+                    <p>Perfect for weight management.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Versatile</h3>
+                    <p>Can be used in countless dishes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ for tofu lovers</p>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>

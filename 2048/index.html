@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <title>2048 Game</title>
@@ -9,9 +9,14 @@
     <div class="container">
         <div class="header">
             <h1>2048</h1>
-            <div class="score-container">
-                <div class="score-label">Score</div>
-                <div id="score">0</div>
+            <div class="theme-score-container">
+                <button id="theme-toggle" class="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="score-container">
+                    <div class="score-label">Score</div>
+                    <div id="score">0</div>
+                </div>
             </div>
         </div>
         <div class="instructions">

@@ -1,3 +1,21 @@
+:root[data-theme="light"] {
+    --bg-color: #faf8ef;
+    --text-color: #776e65;
+    --grid-color: #bbada0;
+    --tile-color: #eee4da;
+    --tile-text-color: #776e65;
+    --bright-text: white;
+}
+
+:root[data-theme="dark"] {
+    --bg-color: #1f2937;
+    --text-color: #e5e7eb;
+    --grid-color: #4b5563;
+    --tile-color: #374151;
+    --tile-text-color: #e5e7eb;
+    --bright-text: white;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -5,7 +23,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #faf8ef;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
 }
 
 .container {
@@ -20,13 +39,40 @@ body {
 }
 
 h1 {
-    color: #776e65;
+    color: var(--text-color);
     margin: 0;
 }
 
+.theme-score-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grid-color);
+    color: var(--bright-text);
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    opacity: 0.9;
+}
+
 .score-container {
-    background-color: #bbada0;
-    color: white;
+    background-color: var(--grid-color);
+    color: var(--bright-text);
     padding: 10px;
     border-radius: 5px;
 }
@@ -36,7 +82,7 @@ h1 {
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(4, 100px);
     gap: 15px;
-    background-color: #bbada0;
+    background-color: var(--grid-color);
     border-radius: 5px;
     padding: 15px;
 }
@@ -51,21 +97,21 @@ h1 {
     transition: all 0.2s ease-in-out;
 }
 
-.tile-2 { background-color: #eee4da; color: #776e65; }
-.tile-4 { background-color: #ede0c8; color: #776e65; }
-.tile-8 { background-color: #f2b179; color: white; }
-.tile-16 { background-color: #f59563; color: white; }
-.tile-32 { background-color: #f67c5f; color: white; }
-.tile-64 { background-color: #f65e3b; color: white; }
-.tile-128 { background-color: #edcf72; color: white; }
-.tile-256 { background-color: #edcc61; color: white; }
-.tile-512 { background-color: #edc850; color: white; }
-.tile-1024 { background-color: #edc53f; color: white; }
-.tile-2048 { background-color: #edc22e; color: white; }
+.tile-2 { background-color: var(--tile-color); color: var(--tile-text-color); }
+.tile-4 { background-color: #ede0c8; color: var(--tile-text-color); }
+.tile-8 { background-color: #f2b179; color: var(--bright-text); }
+.tile-16 { background-color: #f59563; color: var(--bright-text); }
+.tile-32 { background-color: #f67c5f; color: var(--bright-text); }
+.tile-64 { background-color: #f65e3b; color: var(--bright-text); }
+.tile-128 { background-color: #edcf72; color: var(--bright-text); }
+.tile-256 { background-color: #edcc61; color: var(--bright-text); }
+.tile-512 { background-color: #edc850; color: var(--bright-text); }
+.tile-1024 { background-color: #edc53f; color: var(--bright-text); }
+.tile-2048 { background-color: #edc22e; color: var(--bright-text); }
 
 .instructions {
     margin-bottom: 20px;
-    color: #776e65;
+    color: var(--text-color);
 }
 
 .instructions p {
@@ -88,8 +134,8 @@ h1 {
 
 .key-controls span {
     display: inline-block;
-    background-color: #bbada0;
-    color: white;
+    background-color: var(--grid-color);
+    color: var(--bright-text);
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -98,24 +144,18 @@ h1 {
     font-weight: bold;
 }
 
-.container {
-    text-align: center;
-}
-
-.controls {
-    margin-top: 20px;
-}
-
-#new-game {
-    background-color: #8f7a66;
-    color: white;
+.controls button {
+    background-color: var(--grid-color);
+    color: var(--bright-text);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: opacity 0.2s ease;
 }
 
-#new-game:hover {
-    background-color: #9f8a76;
+.controls button:hover {
+    opacity: 0.9;
 }

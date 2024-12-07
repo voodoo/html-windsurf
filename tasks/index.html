@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Task Manager</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Project Task Manager</h1>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <div class="theme-toggle-track">
+                        <div class="theme-toggle-thumb"></div>
+                        <div class="theme-toggle-icons">
+                            <span class="light-icon">☀️</span>
+                            <span class="dark-icon">🌙</span>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </header>
+        
+        <div class="new-project">
+            <input type="text" id="projectInput" placeholder="New Project Name (Press Enter)">
+        </div>
+
+        <div class="projects-container"></div>
+
+        <template id="project-template">
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-title">
+                        <h2></h2>
+                    </div>
+                    <button class="delete-btn">Delete</button>
+                </div>
+                <div class="task-list" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+                    <input type="text" class="task-input" placeholder="Add a new task...">
+                </div>
+            </div>
+        </template>
+
+        <template id="task-template">
+            <div class="task" draggable="true" ondragstart="handleDragStart(event)" ondragend="handleDragEnd(event)">
+                <div class="drag-handle">⋮⋮</div>
+                <input type="checkbox">
+                <span></span>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </template>
+
+        <div id="projects"></div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

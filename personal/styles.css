@@ -8,8 +8,15 @@
     --card-shadow: rgba(0, 0, 0, 0.1);
     --card-hover-shadow: rgba(0, 0, 0, 0.15);
     --card-hover-bg: #f3f4f6;
-    --hero-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, var(--bg-color) 100%);
+    --hero-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(255, 255, 255, 0.75) 100%);
     --transition: all 0.3s ease;
+    --font-weight: 200;
+    --font-weight-bold: 600;
+    --overlay-opacity: 0.7;
+    --hover-color: #1d4ed8;
+    --border-color: #e5e7eb;
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
 }
 
 [data-theme="dark"] {
@@ -22,8 +29,14 @@
     --card-shadow: rgba(0, 0, 0, 0.3);
     --card-hover-shadow: rgba(0, 0, 0, 0.4);
     --card-hover-bg: #2d3748;
-    --hero-gradient: linear-gradient(135deg, rgba(96, 165, 250, 0.15) 0%, var(--bg-color) 100%);
+    --hero-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(17, 24, 39, 0.9) 100%);
     --transition: all 0.3s ease;
+    --overlay-opacity: 0.92;
+    --hover-color: #93c5fd;
+    --border-color: #374151;
+    --card-bg: #1f2937;
+    --card-border: #374151;
+    --card-hover-bg: #374151;
 }
 
 * {
@@ -80,17 +93,33 @@ body {
 }
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
-    background: linear-gradient(-190deg, #6f85a6 0%, #ffffff 60%);
+    padding: 2rem;
+    position: relative;
+    background: var(--hero-gradient), url('https://images.pexels.com/photos/3742711/pexels-photo-3742711.jpeg?auto=compress&cs=tinysrgb&w=1920') no-repeat center center;
+    background-size: cover;
 }
 
-[data-theme="dark"] .hero {
-    background: linear-gradient(190deg, #1a365d 0%, #111827 100%);
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-color);
+    opacity: var(--overlay-opacity);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
 }
 
 .hero-content h1 {
@@ -151,6 +180,9 @@ h4 {
     font-size: 1.1rem;
     margin-bottom: 3rem;
     text-align: center;
+    color: var(--text-color);
+    font-weight: var(--font-weight);
+    opacity: 0.5;
 }
 
 .about-content {

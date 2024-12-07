@@ -242,6 +242,25 @@ class Game2048 {
     }
 }
 
+// Theme toggle functionality
+const themeToggle = document.getElementById('theme-toggle');
+const htmlElement = document.documentElement;
+const themeIcon = document.querySelector('.theme-icon');
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme') || 'light';
+htmlElement.setAttribute('data-theme', savedTheme);
+themeIcon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    htmlElement.setAttribute('data-theme', newTheme);
+    themeIcon.textContent = newTheme === 'light' ? '🌙' : '☀️';
+    localStorage.setItem('theme', newTheme);
+});
+
 // Initialize the game when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     new Game2048();
